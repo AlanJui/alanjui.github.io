@@ -10,7 +10,7 @@ const rootDir = './docs'
 findMarkdown(rootDir, writeComponents)
 
 function writeComponents(dir) {
-  fs.appendFile(dir, `\n \n <Vssue title="My Vuepress Blog" /> \n`, (err) => {
+  fs.appendFile(dir, `\n \n <Vssue title="My Vuepress Blog" /> \n `, (err) => {
     if (err) throw err
     console.log(`Add comment tag to ${dir}`)
   })
