@@ -8,6 +8,7 @@ tags:
 date: 2018/10/20
 author: 居正中
 location: 汐止
+archived: false
 ---
 
 在 Ubuntu 作業系統，可使用 virt-manager 管理符合 Libvirt API 規格之「虛擬機器（VM：Virtual Machine）」。

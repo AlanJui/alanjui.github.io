@@ -8,6 +8,7 @@ tags:
 date: 2018/10/19
 author: 居正中
 location: 汐止
+archived: false
 ---
 
 ## 安裝作業

@@ -4,6 +4,10 @@
 # next.js build output
 .next
 
+# IDE
+.idea/
+.vscode/
+
 # VuePress
 node_modules/
 docs/.vuepress/dist/**

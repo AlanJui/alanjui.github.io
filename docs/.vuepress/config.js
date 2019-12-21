@@ -15,7 +15,7 @@ module.exports = {
         link: '/',
       },
       {
-        text: '已歸檔',
+        text: '歸檔',
         link: '/archive/',
       },
       {
@@ -24,22 +24,6 @@ module.exports = {
       },
     ]
   },
-
-  // modifyBlogPluginOptions(blogPluginOptions) {
-  //   const sitemap = {
-  //     hostname: 'https://alanjui.github.io'
-  //   }
-
-  //   const comment = {
-  //     service: 'vssue',
-  //     owner: 'AlanJui',
-  //     repo: 'my-vuepress-blog',
-  //     clientId: 'c5db97c3586af7779b57',
-  //     clientSecret: '5301618895124721017ff8bfc2e2c2d113716b1f',
-  //   }
-
-  //   return { ...blogPluginOptions, sitemap, comment }
-  // },
 
   plugins: [
     ['@vssue/vuepress-plugin-vssue', {

@@ -9,71 +9,71 @@ tags:
 date: 2019/12/3
 author: 居正中
 location: 汐止
-
+archived: false
 ---
 
 ## 軟體開發者打造環境的需求
 
-從軟體開發者的工作流程，觀察作業應用的使用者需求；兼談 Tmux 與 Vim 工具能提供的功能特性。
+從軟體開發者的工作流程，觀察作業應用的使用者需求；兼談 tmux 與 vim 工具能提供的功能特性。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sSOfr2MtRU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ssofr2mtru8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## 以 VS Code 為師，使用 Vim + Tmux 打造開發環境
+## 以 vs code 為師，使用 vim + tmux 打造開發環境
 
-對於用過 VS Code 的使用者，想要透過 Vim + Tmux 打造個人化開發環境時，該怎麼做、應滿足那些要求？！
+對於用過 vs code 的使用者，想要透過 vim + tmux 打造個人化開發環境時，該怎麼做、應滿足那些要求？！
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gnupOrSEikQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gnuporseikq" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## 跟著高手練功
 
-參考高手已完成的實作案例，快速學習實務方面，在「設定」上的 How-to 。
+參考高手已完成的實作案例，快速學習實務方面，在「設定」上的 how-to 。
 
- - [**A Complete Guide for Installing and Setting up Neovim for Python Development**](https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/)
+ - [**a complete guide for installing and setting up neovim for python development**](https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/)
 
      ::: tip 【附註】： 
-     以上文章，個人已完成實習，並將 Nvim 設定檔（ **init.vim** ）的內容抄錄於下方，供有興趣的朋友參考之用。
+     以上文章，個人已完成實習，並將 nvim 設定檔（ **init.vim** ）的內容抄錄於下方，供有興趣的朋友參考之用。
      :::
 
- - [**Setup Neovim for Python**](https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/)
+ - [**setup neovim for python**](https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/)
 
  - [**使用 neovim 打造一個現代化的編輯單**](http://liaoph.com/modern-vim/)
 
- - [**VSCode-like envirnoment with vim + tmux**](https://blog.inkdrop.info/vscode-like-environment-with-vim-tmux-4c2bfe17d31e)
+ - [**vscode-like envirnoment with vim + tmux**](https://blog.inkdrop.info/vscode-like-environment-with-vim-tmux-4c2bfe17d31e)
 
 
 
 ## 基礎打底
 
-因為對 Vim 或 Tmux ，「有點熟但不是很熟 」的朋友，有些「專有名詞」、「操作概念」還無法全掌握者，可參考以下資料，練好基本功，為實力紮基礎。
+因為對 vim 或 tmux ，「有點熟但不是很熟 」的朋友，有些「專有名詞」、「操作概念」還無法全掌握者，可參考以下資料，練好基本功，為實力紮基礎。
 
 
-### 🖲 Python 開發者使用需求
+### 🖲 python 開發者使用需求
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vlb3qUiS2ZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-### 🖲 何謂 Syntax Highlighting
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/P5US8U8-KmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vlb3quis2zy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### 🖲 [Copy and Paste for tmux & vim on Linux](http://squidarth.com/programming/2018/12/14/tmux-linux.html)
+### 🖲 何謂 syntax highlighting
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p5us8u8-kma" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### 🖲 [使用 Linux 的 AppImage 檔案在 Ubuntu 18.04 安裝 Nvim](https://github.com/neovim/neovim/releases/tag/v0.4.3)
+### 🖲 [copy and paste for tmux & vim on linux](http://squidarth.com/programming/2018/12/14/tmux-linux.html)
+
+
+### 🖲 [使用 linux 的 appimage 檔案在 ubuntu 18.04 安裝 nvim](https://github.com/neovim/neovim/releases/tag/v0.4.3)
 
 
 
 ## 個人實作成品參考
 
-以下之「設定檔」，於 Ubuntu 18.04 作業系統完成實作。
+以下之「設定檔」，於 ubuntu 18.04 作業系統完成實作。
 
 
-### Nvim 設定檔（～/.config/nvim/init.vim)
+### nvim 設定檔（～/.config/nvim/init.vim)
     "--------------------------------------------------------------
-    " 擴充套件（Plugins）
+    " 擴充套件（plugins）
     "--------------------------------------------------------------
     
     call plug#begin('~/.local/share/nvim/plugged')
