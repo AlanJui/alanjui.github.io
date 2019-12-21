@@ -169,6 +169,3 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-58-generic x86_64)
 - [**Vagrant and Libvirt with KVM or QEMU**](https://docs.cumulusnetworks.com/cumulus-vx/Development-Environments/Vagrant-and-Libvirt-with-KVM-or-QEMU/)
 
 - [**How to Use Vagrant with Libvirt on Linux**](https://computingforgeeks.com/using-vagrant-with-libvirt-on-linux/)
-
-
-

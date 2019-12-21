@@ -117,6 +117,3 @@ fi
 
 - [Git PS1 error in pipenv shell #844](https://github.com/pypa/pipenv/issues/844)
 - [.bash_profile 與 .bashrc 的差異](http://jamestw.logdown.com/posts/283485--bash-profile-bashrc-difference?source=post_page-----4834eaf73379----------------------)
-
-
-

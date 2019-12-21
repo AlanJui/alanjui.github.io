@@ -7,6 +7,7 @@
     "fa:build": "node node_modules/vuepress-plugin-font-awesome/index.js",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "build:comment": "node ./build/addCommentTag.js && vuepress build docs && node ./build/removeCommentTag.js",
     "server": "npx http-server docs/.vuepress/dist/",
     "deploy": ". deploy.sh"
   },

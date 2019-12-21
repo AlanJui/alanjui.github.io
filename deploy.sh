@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # (1) Build
-yarn build
+#yarn build
+yarn build:comment
 
 # (2) Commit to Local Site
 git add -f docs/.vuepress/dist && git commit -m "Update commit"
