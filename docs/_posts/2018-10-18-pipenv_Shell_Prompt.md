@@ -1,8 +1,9 @@
 ---
 title: 執行完 pipenv 後 Shell Prompt 怪怪的
-date: 2018-10-18 08:32:00
-description: 使用 pipenv shell 啟動「Python虛擬環境」後，Shell 的提示符號之前，原本該顯示的「使用者帳號」、「目前所在目錄路徑」全都不見了⋯⋯
-sidebar: auto
+date: 2018-10-18
+summary: 使用 pipenv shell 啟動「Python虛擬環境」後，Shell 的提示符號之前，原本該顯示的「使用者帳號」、「目前所在目錄路徑」全都不見了⋯⋯
+author: 居正中
+location: 汐止
 tags:
     - Python
     - VirtualEnv

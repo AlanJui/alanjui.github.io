@@ -1,7 +1,9 @@
 ---
 title: 在 Ubuntu 18.04 使用 Vagrant Box for Libvirt 建置 VM
-date: 2018-10-20 11:21:00
-description: 在 Ubuntu 18.04 透過 Vagrant Box for Libvirt ，快速建置 VM 的秘訣。 
+date: 2018-10-20
+summary: 在 Ubuntu 18.04 透過 Vagrant Box for Libvirt ，快速建置 VM 的秘訣。 
+author: 居正中
+location: 汐止
 sidebar: auto
 tags:
     - Ubuntu
