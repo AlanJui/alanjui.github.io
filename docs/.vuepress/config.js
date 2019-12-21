@@ -2,6 +2,7 @@
 module.exports = {
   title: '中道部落格',
   description: '使用 VuePress 打造的部落格',
+  base: '/my-vuepress-blog/',
 
   theme: "@vuepress/blog",
   // theme: "thindark",
@@ -31,10 +32,10 @@ module.exports = {
       service: 'disqus',
       shortname: 'disqus-shortname',
       // service: 'vssue',
-      // owner: 'You',
-      // repo: 'Your repo',
-      // clientId: 'Your clientId',
-      // clientSecret: 'Your clientSecret',
+      owner: 'AlanJui',
+      repo: 'my-vuepress-blog',
+      clientId: 'AlanJui',
+      clientSecret: 'Add_comment_to_my_github_repo',
     }
 
     return { ...blogPluginOptions, sitemap, comment }
