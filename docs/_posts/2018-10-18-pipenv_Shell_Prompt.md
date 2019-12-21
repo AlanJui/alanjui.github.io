@@ -1,13 +1,13 @@
 ---
 title: 執行完 pipenv 後 Shell Prompt 怪怪的
-date: 2018-10-18
 summary: 使用 pipenv shell 啟動「Python虛擬環境」後，Shell 的提示符號之前，原本該顯示的「使用者帳號」、「目前所在目錄路徑」全都不見了⋯⋯
+tags:
+  - Python
+  - VirtualEnv
+  - pipenv
+date: 2018/10/18
 author: 居正中
 location: 汐止
-tags:
-    - Python
-    - VirtualEnv
-    - pipenv
 ---
 
 在我的 macOS 作業系統上，使用 ZSH 當成 Command Line 的操作介面時，天空是藍色的，以 pipenv 管理 Python 的虛擬環境時，一切運作正常。

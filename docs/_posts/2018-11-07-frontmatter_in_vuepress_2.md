@@ -1,8 +1,10 @@
 ---
-date: 2018-11-7
-tag: 
+title: Front Matter in VuePress
+summary: How to use Front Matter in your VuePress Blog.
+tags: 
   - frontmatter
   - vuepress
+date: 2018-11-7
 author: ULIVZ
 location: Hangzhou  
 ---

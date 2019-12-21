@@ -23,23 +23,34 @@ module.exports = {
     ]
   },
 
-  modifyBlogPluginOptions(blogPluginOptions) {
-    const sitemap = {
-      hostname: 'https://alanjui.github.io'
-    }
+  // modifyBlogPluginOptions(blogPluginOptions) {
+  //   const sitemap = {
+  //     hostname: 'https://alanjui.github.io'
+  //   }
 
-    const comment = {
-      service: 'disqus',
-      shortname: 'disqus-shortname',
-      // service: 'vssue',
+  //   const comment = {
+  //     service: 'vssue',
+  //     owner: 'AlanJui',
+  //     repo: 'my-vuepress-blog',
+  //     clientId: 'c5db97c3586af7779b57',
+  //     clientSecret: '5301618895124721017ff8bfc2e2c2d113716b1f',
+  //   }
+
+  //   return { ...blogPluginOptions, sitemap, comment }
+  // },
+
+  plugins: [
+    ['@vssue/vuepress-plugin-vssue', {
+      // 设置 `platform` 而不是 `api`
+      platform: 'github',
+
+      // 其他的 Vssue 配置
       owner: 'AlanJui',
       repo: 'my-vuepress-blog',
-      clientId: 'AlanJui',
-      clientSecret: 'Add_comment_to_my_github_repo',
-    }
-
-    return { ...blogPluginOptions, sitemap, comment }
-  },
+      clientId: 'c5db97c3586af7779b57',
+      clientSecret: '5301618895124721017ff8bfc2e2c2d113716b1f',
+    }],
+  ],
 
   markdown: {
     lineNumbers: true

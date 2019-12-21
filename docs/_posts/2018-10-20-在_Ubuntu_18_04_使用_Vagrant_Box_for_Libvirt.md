@@ -1,14 +1,13 @@
 ---
 title: 在 Ubuntu 18.04 使用 Vagrant Box for Libvirt 建置 VM
-date: 2018-10-20
 summary: 在 Ubuntu 18.04 透過 Vagrant Box for Libvirt ，快速建置 VM 的秘訣。 
+tags:
+  - Ubuntu
+  - VM
+  - Vagrant
+date: 2018/10/20
 author: 居正中
 location: 汐止
-sidebar: auto
-tags:
-    - Ubuntu
-    - VM
-    - Vagrant
 ---
 
 在 Ubuntu 作業系統，可使用 virt-manager 管理符合 Libvirt API 規格之「虛擬機器（VM：Virtual Machine）」。

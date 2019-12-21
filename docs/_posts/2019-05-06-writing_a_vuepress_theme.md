@@ -1,12 +1,16 @@
 ---
-date: 2019-5-6
-tag: 
+title: Writing a VuePress theme
+summary: How to write your own VuePress Theme
+tags: 
   - theme
   - blog
   - vuepress
+date: 2019-5-6
 author: ULIVZ
 location: Shanghai  
 ---
+
+<Vssue title="My Vuepress Blog" />
 
 # Writing a VuePress theme
 

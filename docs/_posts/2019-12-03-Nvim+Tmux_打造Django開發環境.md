@@ -1,14 +1,15 @@
 ---
 title: Nvim + Tmux 打造 Django 開發環境
-date: 2019-12-3
 summary: 使用 Nvim 與 Tmux ，打造個人化，適用於 Django Framework（Python語言）的「軟體開發環境」。
+tags:
+  - Nvim
+  - Tmux
+  - Django
+  - Python
+date: 2019/12/3
 author: 居正中
 location: 汐止
-tags:
-    - Nvim
-    - Tmux
-    - Django
-    - Python
+
 ---
 
 ## 軟體開發者打造環境的需求
@@ -614,3 +615,5 @@ tags:
     # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
          run -b '~/.tmux/plugins/tpm/tpm'
 
+
+<Vssue title="My Vuepress Blog" />
