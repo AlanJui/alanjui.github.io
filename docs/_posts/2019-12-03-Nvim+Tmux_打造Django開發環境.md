@@ -12,18 +12,20 @@ location: 汐止
 archived: false
 ---
 
+# Nvim + Tmux 打造 Django 開發環境
+
 ## 軟體開發者打造環境的需求
 
 從軟體開發者的工作流程，觀察作業應用的使用者需求；兼談 tmux 與 vim 工具能提供的功能特性。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ssofr2mtru8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sSOfr2MtRU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## 以 vs code 為師，使用 vim + tmux 打造開發環境
 
 對於用過 vs code 的使用者，想要透過 vim + tmux 打造個人化開發環境時，該怎麼做、應滿足那些要求？！
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gnuporseikq" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gnupOrSEikQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## 跟著高手練功
@@ -49,14 +51,14 @@ archived: false
 因為對 vim 或 tmux ，「有點熟但不是很熟 」的朋友，有些「專有名詞」、「操作概念」還無法全掌握者，可參考以下資料，練好基本功，為實力紮基礎。
 
 
-### 🖲 python 開發者使用需求
+### 🖲 Python 開發者使用需求
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vlb3quis2zy" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vlb3qUiS2ZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### 🖲 何謂 syntax highlighting
+### 🖲 何謂 Syntax Highlighting
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p5us8u8-kma" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P5US8U8-KmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ### 🖲 [copy and paste for tmux & vim on linux](http://squidarth.com/programming/2018/12/14/tmux-linux.html)

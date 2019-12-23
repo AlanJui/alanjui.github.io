@@ -11,10 +11,13 @@ location: 汐止
 archived: false
 ---
 
+# 執行完 pipenv 後 Shell Prompt 怪怪的
+
 在我的 macOS 作業系統上，使用 ZSH 當成 Command Line 的操作介面時，天空是藍色的，以 pipenv 管理 Python 的虛擬環境時，一切運作正常。
 
 
-![](https://paper-attachments.dropbox.com/s_E0FE9E5474053ADFE59BF139FA39C215CCC86B81A5277B5AE04311F8F42685B9_1571196203931_image.png)
+<!-- ![](https://paper-attachments.dropbox.com/s_E0FE9E5474053ADFE59BF139FA39C215CCC86B81A5277B5AE04311F8F42685B9_1571196203931_image.png) -->
+![](/img/2018-10-18-Fig-01.png)
 
 
 但是這個看來賞心悅目的操作介面，在撰寫技術文件的時候，卻是個麻煩。因為在 Copy / Paste ，置入了文字編輯器後，呈現的系「亂碼二分之一」不忍卒睹的結果！  😿
@@ -59,7 +62,7 @@ archived: false
 
  3. Shell Prompt 顯示的格式，不再是原先的：**《使用者帳號》@《電腦名稱》**。
 
-    ![](https://paper-attachments.dropbox.com/s_E0FE9E5474053ADFE59BF139FA39C215CCC86B81A5277B5AE04311F8F42685B9_1571194279863_image.png)
+    ![](/img/2018-10-18-Fig-02.png)
 
 
 ## 問題解析
@@ -87,7 +90,7 @@ fi
         alanjui@MBP-2018:~/workspace/Python/django_002 (master) 
         $ 
 
-    ![](https://paper-attachments.dropbox.com/s_E0FE9E5474053ADFE59BF139FA39C215CCC86B81A5277B5AE04311F8F42685B9_1571198677813_image.png)
+    ![](/img/2018-10-18-Fig-03.png)
 
 
  2. 新增檔案： ~/.bashrc，檔內設定如下：
@@ -109,7 +112,7 @@ fi
         alanjui@MBP-2018:~/workspace/Python/django_002 (master) 
         $ pipenv shell
 
-    ![](https://paper-attachments.dropbox.com/s_E0FE9E5474053ADFE59BF139FA39C215CCC86B81A5277B5AE04311F8F42685B9_1571195435195_image.png)
+    ![](/img/2018-10-18-Fig-04.png)
 
 
 

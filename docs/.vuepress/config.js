@@ -36,6 +36,22 @@ module.exports = {
       clientId: 'c5db97c3586af7779b57',
       clientSecret: '5301618895124721017ff8bfc2e2c2d113716b1f',
     }],
+    ['vuepress-plugin-container', {
+      type: 'tip',
+      defaultTitle: {
+        '/': 'TIP',
+        '/zh/': '提示',
+      },
+    }],
+    ['vuepress-plugin-container', {
+      type: 'right',
+      defaultTitle: '',
+    }],
+    ['vuepress-plugin-container', {
+      type: 'theorem',
+      before: info => `<div class="theorem"><p class="title">${info}</p>`,
+      after: '</div>'
+    }],
   ],
 
   markdown: {

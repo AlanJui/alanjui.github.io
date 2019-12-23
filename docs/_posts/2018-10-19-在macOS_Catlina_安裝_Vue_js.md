@@ -11,10 +11,25 @@ location: 汐止
 archived: false
 ---
 
-## 安裝作業
+# 在 macOS Catlina 安裝 Vue.js
+
+<!-- ::: theorem Newton's First Law
+In an inertial frame of reference, an object either remains at rest or continues to move at a constant velocity, unless acted upon by a force.
+
+::: right
+From [Wikipedia](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion)
+:::
 
 ::: tip
-【參考文件】： [Vue CLI](https://cli.vuejs.org/guide/prototyping.html)
+Tip container of `@vuepress/theme-default`
+::: -->
+
+## 安裝作業
+
+Vue.js 之使用，需搭配 Vue CLI 指令操作。
+
+::: tip 【參考文件】： 
+[Vue CLI](https://cli.vuejs.org/guide/prototyping.html)
 :::
 
 ### 安裝前準備
@@ -51,8 +66,8 @@ Vue CLI 需搭配 Node.js 版本 8.11.0+ 。故請先用以下指令檢查目前
 - Vue VS Code Extension Pack
 - Vue 2 Snippets
 
-::: tip
-【參考文件】： [BEST VISUAL STUDIO CODE VUE.JS EXTENSIONS FOR SITECORE JSS DEVELOPMENT](https://www.kayee.nl/2019/03/11/best-visual-studio-code-vue-js-extensions-for-sitecore-jss-development/)
+::: tip 【參考文件】： 
+[BEST VISUAL STUDIO CODE VUE.JS EXTENSIONS FOR SITECORE JSS DEVELOPMENT](https://www.kayee.nl/2019/03/11/best-visual-studio-code-vue-js-extensions-for-sitecore-jss-development/)
 :::
 
 
@@ -61,8 +76,8 @@ Vue CLI 需搭配 Node.js 版本 8.11.0+ 。故請先用以下指令檢查目前
 
 ### 使用 n 進行版本控管
 
-::: tip
-【參考文件】： [n – Interactively Manage Your Node.js Versions](https://github.com/tj/n)
+::: tip 【參考文件】： 
+[n – Interactively Manage Your Node.js Versions](https://github.com/tj/n)
 :::
 
  1. 安裝 n ：不使用 brew ，改用 n-install 方式安裝：

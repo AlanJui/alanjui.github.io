@@ -11,6 +11,8 @@ location: 汐止
 archived: false
 ---
 
+# 在 Ubuntu 18.04 使用 Vagrant Box for Libvirt 建置 VM
+
 在 Ubuntu 作業系統，可使用 virt-manager 管理符合 Libvirt API 規格之「虛擬機器（VM：Virtual Machine）」。
 
 VM 之建置作業，採用 Vagrant Box 建置 VM 可降低不少時間。但 Vagrant Box 預設之 VM 執行環境為：VirtualBox。 若不熟悉這些「眉角」，每當執行 **vagrant up** 指令後，總會在終端機看到 VM 無法正常啟動的錯誤訊息。

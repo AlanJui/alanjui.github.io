@@ -4,8 +4,8 @@
 set -e
 
 # build
-# npm run build
-yarn build:comment
+npm run build
+# yarn build:comment
 
 # navigate into the build output directory
 cd docs/.vuepress/dist/
