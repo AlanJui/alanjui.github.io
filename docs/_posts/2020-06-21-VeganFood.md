@@ -10,13 +10,13 @@ location: 汐止
 archived: false
 ---
 
-## 專業素食食品網站
+## 專業販售素食食品網站
 
 - [愛家純素生活館](https://www.pcstore.com.tw/lovinghut)
 - [里仁線上購物](https://www.leezen.com.tw/product.php?cat=28)
 - [素易購](https://mall.suiis.com/product_list.aspx?scat=17047&class=1&prop=16)
 
-## 一般食品線上購物網站
+## 一般食品購物網站
 
 - [家樂福線上購物](https://online.carrefour.com.tw/tw/)
 - [MOMO 購物網 》食品飲料](https://www.momoshop.com.tw/category/LgrpCategory.jsp?l_code=2099900000&mdiv=1099700000-bt_0_957_01-&ctype=B)
