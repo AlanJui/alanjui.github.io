@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nvim + Tmux 打造 Django 開發環境</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.0c027509.css" as="style"><link rel="preload" href="/assets/js/app.00a054c4.js" as="script"><link rel="preload" href="/assets/js/2.e4e37098.js" as="script"><link rel="preload" href="/assets/js/13.65b3226a.js" as="script"><link rel="prefetch" href="/assets/js/10.1787bbd4.js"><link rel="prefetch" href="/assets/js/11.e73034a2.js"><link rel="prefetch" href="/assets/js/12.af671b96.js"><link rel="prefetch" href="/assets/js/14.73e13afb.js"><link rel="prefetch" href="/assets/js/15.313fb00f.js"><link rel="prefetch" href="/assets/js/16.b9a147eb.js"><link rel="prefetch" href="/assets/js/17.cf3d39b6.js"><link rel="prefetch" href="/assets/js/18.bfb0725c.js"><link rel="prefetch" href="/assets/js/19.91bc1589.js"><link rel="prefetch" href="/assets/js/20.d857c0d4.js"><link rel="prefetch" href="/assets/js/3.1a658bb7.js"><link rel="prefetch" href="/assets/js/4.c29d3736.js"><link rel="prefetch" href="/assets/js/5.b9e5b570.js"><link rel="prefetch" href="/assets/js/6.1faf97c8.js"><link rel="prefetch" href="/assets/js/7.883080d2.js"><link rel="prefetch" href="/assets/js/8.c1a1d32a.js"><link rel="prefetch" href="/assets/js/9.27b738de.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0c027509.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nvim-tmux-打造-django-開發環境"><a href="#nvim-tmux-打造-django-開發環境" class="header-anchor">#</a> Nvim + Tmux 打造 Django 開發環境</h1> <h2 id="軟體開發者打造環境的需求"><a href="#軟體開發者打造環境的需求" class="header-anchor">#</a> 軟體開發者打造環境的需求</h2> <p>從軟體開發者的工作流程，觀察作業應用的使用者需求；兼談 tmux 與 vim 工具能提供的功能特性。</p> <iframe width="560" height="315" src="https://www.youtube.com/embed/sSOfr2MtRU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe> <h2 id="以-vs-code-為師，使用-vim-tmux-打造開發環境"><a href="#以-vs-code-為師，使用-vim-tmux-打造開發環境" class="header-anchor">#</a> 以 vs code 為師，使用 vim + tmux 打造開發環境</h2> <p>對於用過 vs code 的使用者，想要透過 vim + tmux 打造個人化開發環境時，該怎麼做、應滿足那些要求？！</p> <iframe width="560" height="315" src="https://www.youtube.com/embed/gnupOrSEikQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe> <h2 id="跟著高手練功"><a href="#跟著高手練功" class="header-anchor">#</a> 跟著高手練功</h2> <p>參考高手已完成的實作案例，快速學習實務方面，在「設定」上的 how-to 。</p> <ul><li><p><a href="https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/" target="_blank" rel="noopener noreferrer"><strong>a complete guide for installing and setting up neovim for python development</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="custom-block tip"><p class="custom-block-title">【附註】：</p> <p>以上文章，個人已完成實習，並將 nvim 設定檔（ <strong>init.vim</strong> ）的內容抄錄於下方，供有興趣的朋友參考之用。</p></div></li> <li><p><a href="https://jdhao.github.io/2018/12/24/centos_nvim_install_use_guide_en/" target="_blank" rel="noopener noreferrer"><strong>setup neovim for python</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="http://liaoph.com/modern-vim/" target="_blank" rel="noopener noreferrer"><strong>使用 neovim 打造一個現代化的編輯單</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://blog.inkdrop.info/vscode-like-environment-with-vim-tmux-4c2bfe17d31e" target="_blank" rel="noopener noreferrer"><strong>vscode-like envirnoment with vim + tmux</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li></ul> <h2 id="基礎打底"><a href="#基礎打底" class="header-anchor">#</a> 基礎打底</h2> <p>因為對 vim 或 tmux ，「有點熟但不是很熟 」的朋友，有些「專有名詞」、「操作概念」還無法全掌握者，可參考以下資料，練好基本功，為實力紮基礎。</p> <h3 id="🖲-python-開發者使用需求"><a href="#🖲-python-開發者使用需求" class="header-anchor">#</a> 🖲 Python 開發者使用需求</h3> <iframe width="560" height="315" src="https://www.youtube.com/embed/vlb3qUiS2ZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe> <h3 id="🖲-何謂-syntax-highlighting"><a href="#🖲-何謂-syntax-highlighting" class="header-anchor">#</a> 🖲 何謂 Syntax Highlighting</h3> <iframe width="560" height="315" src="https://www.youtube.com/embed/P5US8U8-KmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe> <h3 id="🖲-copy-and-paste-for-tmux-vim-on-linux"><a href="#🖲-copy-and-paste-for-tmux-vim-on-linux" class="header-anchor">#</a> 🖲 <a href="http://squidarth.com/programming/2018/12/14/tmux-linux.html" target="_blank" rel="noopener noreferrer">copy and paste for tmux &amp; vim on linux<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <h3 id="🖲-使用-linux-的-appimage-檔案在-ubuntu-18-04-安裝-nvim"><a href="#🖲-使用-linux-的-appimage-檔案在-ubuntu-18-04-安裝-nvim" class="header-anchor">#</a> 🖲 <a href="https://github.com/neovim/neovim/releases/tag/v0.4.3" target="_blank" rel="noopener noreferrer">使用 linux 的 appimage 檔案在 ubuntu 18.04 安裝 nvim<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3> <h2 id="個人實作成品參考"><a href="#個人實作成品參考" class="header-anchor">#</a> 個人實作成品參考</h2> <p>以下之「設定檔」，於 ubuntu 18.04 作業系統完成實作。</p> <h3 id="nvim-設定檔（～-config-nvim-init-vim"><a href="#nvim-設定檔（～-config-nvim-init-vim" class="header-anchor">#</a> nvim 設定檔（～/.config/nvim/init.vim)</h3> <div class="language- extra-class"><pre><code>&quot;--------------------------------------------------------------
+&quot; 擴充套件（plugins）
+&quot;--------------------------------------------------------------
+
+call plug#begin('~/.local/share/nvim/plugged')
+
+&quot; 停用擴充套件
+&quot; Plug 'davidhalter/jedi-vim', { 'on': []}
+
+&quot; 程式語言　auto-completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'davidhalter/jedi-vim'
+
+&quot; 狀態指示列
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+&quot; 自動配對
+Plug 'jiangmiao/auto-pairs'
+
+&quot; 註釋
+Plug 'scrooloose/nerdcommenter'
+
+&quot; 自動調整排版格式
+&quot; pip install yapf
+Plug 'sbdchd/neoformat'
+
+&quot; 自動顯示定義處(Code Jump)
+Plug 'davidhalter/jedi-vim'
+
+&quot; 檔案顯示管理
+Plug 'scrooloose/nerdtree'
+
+&quot; 程式碼檢核
+&quot; pipenv install pylint
+Plug 'neomake/neomake'
+
+&quot; 多游標編輯
+Plug 'terryma/vim-multiple-cursors'
+
+&quot; 高亮度標示被複製的文字
+Plug 'machakann/vim-highlightedyank'
+
+&quot; 折疊／開展程式碼
+Plug 'tmhedberg/SimpylFold'
+
+&quot; 佈景（Theme）
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'sheerun/vim-polyglot'
+
+call plug#end()
+
+
+&quot;--------------------------------------------------------------
+&quot; 系統設定
+&quot;--------------------------------------------------------------
+
+&quot; 設定 &lt;Leader&gt; 鍵
+let g:mapleader = &quot;,&quot;
+let mapleader = &quot;,&quot;
+set timeout timeoutlen=1500
+
+set clipboard=unnamedplus
+
+&quot; 可用滑鼠操作
+set mouse=a
+
+&quot; 顯示「行標」
+set cursorline
+
+&quot; 離開插入模式，回返一般模式
+imap jj &lt;Esc&gt;
+
+&quot; 設定〔行號〕顯示模式
+set number                  &quot; 顯示行號
+set relativenumber          &quot; 在遊標所在處顯示相對行號
+
+&quot; 變更行號顯示模式
+nmap &lt;leader&gt;nu :set number&lt;CR&gt;             &quot; :set nu
+nmap &lt;leader&gt;n! :set nonumber&lt;CR&gt;           &quot; :set nu!
+nmap &lt;leader&gt;NU :set relativenumber&lt;CR&gt;     &quot; :set rnu
+nmap &lt;leader&gt;N! :set norelativenumber&lt;CR&gt;   &quot; :set nornu
+
+
+&quot;--------------------------------------------------------------
+&quot; 檔案作業
+
+&quot; 停用 backup 與 swap 功能
+set nobackup
+set nowritebackup
+set noswapfile
+
+&quot; Automatically re-read file if a change was detected outside of vim
+set autoread
+
+
+&quot; 編輯設定檔
+nmap &lt;Leader&gt;i :tabnew ~/.config/nvim/init.vim&lt;CR&gt;
+
+&quot; 依據設定檔重啟設定
+nmap &lt;Leader&gt;I :source ~/.config/nvim/init.vim&lt;CR&gt;
+
+
+&quot; 儲存檔案
+nmap &lt;Leader&gt;w :w&lt;CR&gt;
+imap &lt;Leader&gt;w :w&lt;CR&gt;
+vmap &lt;Leader&gt;w :w&lt;CR&gt;
+nnoremap fs :w&lt;CR&gt;
+
+
+&quot; Allows you to save files you opened without write permissions via sudo
+cmap w!! w !sudo tee %
+
+
+&quot; 關閉目前正編輯的檔案
+map fc :bd&lt;CR&gt;      &quot; 已存檔
+map fC :bd!&lt;CR&gt;     &quot; 已編輯，不存檔，強迫關閉
+
+
+&quot; 退出 Vim
+noremap &lt;Leader&gt;e :quit&lt;CR&gt;  &quot; Exit current window
+noremap &lt;Leader&gt;E :qa!&lt;CR&gt;   &quot; Exit all windows
+nnoremap &lt;Leader&gt;Q  :qa!&lt;CR&gt;
+
+
+&quot;--------------------------------------------------------------
+&quot; Tabs and spaces handling
+set smarttab
+set cindent
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set shiftround
+set expandtab               &quot; always uses spaces instead of tab characters
+
+
+&quot; 文字搜尋：Serach configuration
+set ignorecase              &quot; 搜尋時怱略英文字母的大小寫
+set smartcase               &quot; turn on smartcase
+set incsearch
+set hlsearch                &quot; highlight search results
+
+
+
+&quot;--------------------------------------------------------------
+&quot; 系統設定
+&quot;--------------------------------------------------------------
+
+&quot; Enable deoplete plugin
+let g:python3_host_prog = &quot;/home/web_admin/.pyenv/shims/python&quot;
+
+&quot;
+&quot; 程式語言　auto-completion
+&quot;
+let g:deoplete#enable_at_startup = 1
+
+&quot; automatically close the method preview window
+autocmd InsertLeave, CompleteDone * if pumvisible() == 0 | pclose | endif
+
+&quot; Navigate through the auto-completion list with Tab key
+inoremap &lt;expr&gt;&lt;tab&gt; pumvisible() ? &quot;\&lt;c-n&gt;&quot; : &quot;\&lt;tab&gt;&quot;
+
+&quot;
+&quot; 狀態指示列
+&quot;
+let g:airline_theme='luna'
+
+
+&quot;
+&quot; 自動調整排版格式
+&quot;
+
+&quot; Vim Command
+&quot; :Neoformat! [python [yapf]]
+
+&quot; Enable alignment
+let g:neoformat_basic_format_align = 1
+
+&quot; Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+
+&quot; Enable trimming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+
+&quot; Run a formatter on save
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+
+
+&quot;
+&quot; 自動顯示定義處(Code Jump)
+&quot;
+
+&quot; Move the cursor to the class or method you want to check, then press the various supported shortcut provided by jedi-vim:
+&quot;
+&quot; - &lt;leader&gt;d: go to definition
+&quot; - K:         check documentation of class or method
+&quot; - &lt;leader&gt;n: show the usage of a name in current file
+&quot; - &lt;leader&gt;r: rename a name
+
+&quot; disable autocompletion, cause we use deoplete for completion
+let g:jedi#completions_enabled = 0
+
+&quot; open the go-to function in split, not another buffer
+let g:jedi#use_splits_not_buffers = 'right'
+
+
+&quot;
+&quot; 檔案顯示管理
+&quot;
+
+&quot; Vim Command: NERDTree
+&quot; OP Ref: https://jdhao.github.io/2018/09/10/nerdtree_usage/
+&quot; - Open a file in the file explorer: &lt;o&gt;
+&quot; - Switch betwen file window and nerdtree file navigation window:
+&quot;     (a) &lt;C-w&gt;&lt;C-w&gt;
+&quot;     (b) &lt;C-w&gt;&lt;L&gt;
+&quot; - close file explorer window:
+&quot;     (a) &lt;q&gt; on file explorer window
+&quot;     (b) Vim Command: NERDTreeClose
+
+&quot; Open the NerdTree window when start up Nvim, but put the cursor in the file-editing window
+autocmd VimEnter * NERDTree | wincmd p
+
+&quot; Sublime Text like： Open side bar
+nnoremap &lt;silent&gt; &lt;C-k&gt;&lt;C-b&gt; :NERDTreeToggle&lt;CR&gt;
+
+
+&quot;
+&quot; 程式碼檢核
+&quot;
+&quot; Vim Command:
+&quot;  - Neomake: Manually start syntax checking
+&quot;  - lwindow / lopen: Navigate them using the buil-in methods
+&quot;  - lprev / lnext : Go back and forth
+&quot;
+&quot;  pylint --generate-rcfile &gt; ~/.pylintrc
+&quot;  Usage Ref: https://stackoverflow.com/questions/4341746/how-do-i-disable-a-pylint-warning/23542817#23542817
+
+let g:neomake_python_enabled_makers = ['pylint']
+
+&quot; Open the list automatically
+let g:neomake_open_list = 2
+
+&quot; enable automatical code check: normal mode (after 1s; no delay when writing)
+call neomake#configure#automake('nrwi', 500)
+
+
+&quot;
+&quot; 多游標編輯
+&quot;
+&quot; (1) move the cursor to a variable you want to rename
+&quot; (2) press &lt;C-n&gt; to enter multiple cursor ediiting mode and let variable to be highlighted
+&quot; (3) if a occurance want to skip, press &lt;C-x&gt;
+&quot; (4) press &lt;c&gt; (meands to change) and enter insert mode. Input a new name.
+&quot; (5) press &lt;ESC&gt; to exit multiple cursor editting mode
+
+
+&quot;
+&quot; 高亮度標示被複製的文字
+&quot;
+
+highlight HighlightedyankRegion cterm=reverse gui=reverse
+
+&quot; set highlight duration time to 1000 ms, i.e., 1 second
+let g:highlightedyank_highlight_duration = 1000
+
+
+&quot;
+&quot; 折疊／開展程式碼
+&quot;
+
+&quot; - zo： Open fold in current cursor postion
+&quot; - zO： Open fold and sub-fold in current cursor postion recursively
+&quot; - zc： Close the fold in current cursor position
+&quot; - zC： Close the fold and sub-fold in current cursor position recursively
+
+let g:SimpylFold_docstring_preview = 1
+let g:SimpylFold_fold_docstring = 0
+let g:SimpylFold_fold_import = 0
+
+
+&quot;
+&quot; 佈景（Theme）
+&quot;
+
+&quot; support true color
+set notermguicolors
+
+&quot; airline theme
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
+let g:airline_theme='tomorrow'
+
+&quot; gruvbox theme
+colorscheme gruvbox
+set background=dark
+&quot;set background=light
+
+&quot;&quot; onedark theme
+&quot;let g:onedark_hide_endofbuffer = 0
+&quot;let g:onedark_termcolors = 256
+
+&quot;&quot; onedark#extend_highlight
+&quot;if (has(&quot;autocmd&quot;))
+&quot;augroup colorextend
+&quot;autocmd!
+&quot;&quot; Make `Function`s bold in GUI mode
+&quot;autocmd ColorScheme * call onedark#extend_highlight(&quot;Function&quot;, { &quot;gui&quot;: &quot;bold&quot; })
+&quot;&quot; Override the `Statement` foreground color in 256-color mode
+&quot;autocmd ColorScheme * call onedark#extend_highlight(&quot;Statement&quot;, { &quot;fg&quot;: { &quot;cterm&quot;: 128 } })
+&quot;&quot; Override the `Identifier` background color in GUI mode
+&quot;autocmd ColorScheme * call onedark#extend_highlight(&quot;Identifier&quot;, { &quot;bg&quot;: { &quot;gui&quot;: &quot;#333333&quot; } })
+&quot;augroup END
+&quot;endif
+
+&quot;&quot; onedark#set_highlight
+&quot;&quot; onedark.vim override: Don't set a background color when running in a terminal;
+&quot;&quot; just use the terminal's background color
+&quot;&quot; `gui` is the hex color code used in GUI mode/nvim true-color mode
+&quot;&quot; `cterm` is the color code used in 256-color mode
+&quot;&quot; `cterm16` is the color code used in 16-color mode
+&quot;if (has(&quot;autocmd&quot;) &amp;&amp; !has(&quot;gui_running&quot;))
+&quot;augroup colorset
+&quot;autocmd!
+&quot;let s:white = { &quot;gui&quot;: &quot;#ABB2BF&quot;, &quot;cterm&quot;: &quot;145&quot;, &quot;cterm16&quot; : &quot;7&quot; }
+&quot;autocmd ColorScheme * call onedark#set_highlight(&quot;Normal&quot;, { &quot;fg&quot;: s:white }) &quot; `bg` will not be styled since there is no `bg` setting
+&quot;augroup END
+&quot;endif
+
+&quot;&quot;&quot; Global color overrides
+&quot;let g:onedark_color_overrides = {
+      &quot;\ &quot;black&quot;: {&quot;gui&quot;: &quot;#2F343F&quot;, &quot;cterm&quot;: &quot;235&quot;, &quot;cterm16&quot;: &quot;0&quot; },
+      &quot;\ &quot;purple&quot;: { &quot;gui&quot;: &quot;#C678DF&quot;, &quot;cterm&quot;: &quot;170&quot;, &quot;cterm16&quot;: &quot;5&quot; }
+&quot;\}
+
+&quot;syntax on
+&quot;colorscheme onedark
+
+
+&quot;
+&quot; Builtin terminal
+&quot;
+
+&quot; To open the terminal:
+&quot;  (A) :terminal
+&quot;  (B) :vnew term://bash
+&quot;  (C) :new term://bash
+&quot;
+&quot; Entering the terminal emulator: Press &lt;i&gt; to start typing terminal command
+&quot;
+&quot; To exit terminal commad: Press &lt;C-\&gt;&lt;C-n&gt;
+&quot;
+&quot; To exit terminal emulator: exit&lt;Enter&gt;
+</code></pre></div><h3 id="tmux-設定檔（～-tmux-conf）"><a href="#tmux-設定檔（～-tmux-conf）" class="header-anchor">#</a> Tmux 設定檔（～/.tmux.conf）</h3> <div class="language- extra-class"><pre><code># https://tmuxguide.readthedocs.io/en/latest/tmux/tmux.html#tmux-conf
+
+#========================================================
+# Tmux Plugins
+#========================================================
+
+# Tmux Plugin Manager
+if &quot;test ! -d ~/.tmux/plugins/tpm&quot; \
+     &quot;run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &amp;&amp; ~/.tmux/plugins/tpm/bin/install_plugins'&quot;
+
+# List of plugins
+     set -g @plugin 'tmux-plugins/tpm'
+     set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Session save and restore
+#  - continuous saving of tmux environment
+#  - automatic tmux start when computer/server is turned on
+#  - automatic restore when tmux is started
+     set -g @plugin 'tmux-plugins/tmux-resurrect'
+     set -g @plugin 'tmux-plugins/tmux-continuum'
+
+     set -g @plugin 'tmux-plugins/tmux-yank'
+     set -g default-command &quot;reattach-to-user-namespace -l $SHELL&quot;
+
+     set -g @resurrect-strategy-vim 'session'
+
+# Other examples:
+# set -g @plugin 'github_username/plugin_name'
+# set -g @plugin 'git@github.com/user/plugin'
+# set -g @plugin 'git@bitbucket.com/user/plugin'
+
+# Tmux Powerline theme
+     set -g @plugin 'jooize/tmux-powerline-theme'
+
+
+#========================================================
+# Tmux Configuration
+#========================================================
+
+# unbind default prefix and set it to ctrl-a
+     set -g prefix C-t
+     unbind C-b
+     bind C-t send-prefix
+
+# make delay shorter
+     set -sg escape-time 0
+
+# Automatic restore session
+     set -g @continuum-restore 'on'
+
+# history size
+     set -g history-limit 10000
+
+# enable mouse support for switching panes/windows
+     set -g mouse on
+
+### other optimization
+
+# display things in 256 colors
+# set -g default-terminal &quot;xterm-256color&quot;
+# set -ga terminal-overrides &quot;,xterm-256color:Tc&quot;
+
+# tell Tmux that outside terminal supports true color
+     set -g default-terminal &quot;screen-256color&quot;
+     set -ga terminal-overrides &quot;,xterm-256color*:Tc&quot;
+
+# stop auto renaming
+     setw -g automatic-rename off
+     set-option -g allow-rename off
+
+# renumber windows sequentially after closing
+     set -g renumber-windows on
+
+# window notifications; display activity on other window
+     setw -g monitor-activity on
+     set -g visual-activity on
+
+
+#
+# Status Line
+#
+
+# Status Line Format
+     set-window-option -g status-left &quot;&quot;
+     set-window-option -g status-right &quot;#[fg=white,bg=colour88] #S #[fg=colour231,bg=colour240] #H #[fg=black,bg=colour252,nobold] %b %d %a #[bold]%H:%M&quot;
+
+# default status bar colors
+     set -g status-fg colour240
+     set -g status-bg colour233
+
+# default window title colors
+     set-window-option -g window-status-style fg=colour220
+     set-window-option -g window-status-style bg=default
+
+#
+# Status bar window in background (not active)
+#
+# set-window-option -g window-status-format &quot;#I #W &quot;
+
+     set-window-option -g window-status-style dim
+     set-window-option -g window-status-style bg=colour240
+     set-window-option -g window-status-style fg=colour231
+
+#
+# Status bar window currently active
+#
+# set-window-option -g window-status-current-format &quot;#I #W &quot;
+
+# active window title colors
+     set-window-option -g window-status-current-style bright
+     set-window-option -g window-status-current-style bg=colour68
+     set-window-option -g window-status-current-style fg=colour220
+
+
+#========================================================
+# Key bindings
+#========================================================
+
+# reload config file
+     bind r source-file ~/.tmux.conf \; display-message &quot;Config reloaded...&quot;
+
+# quickly open a new window
+     bind N new-window
+
+# synchronize all panes in a window
+     bind y setw synchronize-panes
+
+# &quot;|&quot; splits the current window vertically, and &quot;-&quot; splits it horizontally
+     unbind %
+     bind | split-window -h
+     bind - split-window -v
+
+# Pane navigation (vim-like)
+     bind h select-pane -L
+     bind j select-pane -D
+     bind k select-pane -U
+     bind l select-pane -R
+
+# Pane resizing
+     bind -r Left  resize-pane -L 4
+     bind -r Down  resize-pane -D 4
+     bind -r Up    resize-pane -U 4
+     bind -r Right resize-pane -R 4
+
+# Move window
+     bind-key S-Left swap-window -t -1
+     bind-key S-Right swap-window -t +1
+
+# Cycle prev/next pane
+# bind -n S-Left  select-pane -t :.-
+# bind -n S-Right select-pane -t :.+
+# bind -n C-n     select-pane -t :.+
+
+# Open current directory
+     bind f run-shell &quot;open #{pane_current_path}&quot;
+
+#### copy mode : vim ####
+
+     bind P paste-buffer
+
+# set vi mode for copy mode
+     setw -g mode-keys vi
+
+# Setup 'v' to begin selection as in Vim
+     bind -T copy-mode-vi 'v' send-keys -X begin-selection
+
+# Copy to tmux buffer
+# For binding 'y' to copy and exiting selection mode
+     bind -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel &quot;xclip -sel clip -i&quot;
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+     run -b '~/.tmux/plugins/tpm/tpm'
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.00a054c4.js" defer></script><script src="/assets/js/2.e4e37098.js" defer></script><script src="/assets/js/13.65b3226a.js" defer></script>
+  </body>
+</html>

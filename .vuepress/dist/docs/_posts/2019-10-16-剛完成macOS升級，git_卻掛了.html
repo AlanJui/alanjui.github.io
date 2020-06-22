@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>剛完成 macOS升級，git 卻掛了！！</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.0c027509.css" as="style"><link rel="preload" href="/assets/js/app.00a054c4.js" as="script"><link rel="preload" href="/assets/js/2.e4e37098.js" as="script"><link rel="preload" href="/assets/js/12.af671b96.js" as="script"><link rel="prefetch" href="/assets/js/10.1787bbd4.js"><link rel="prefetch" href="/assets/js/11.e73034a2.js"><link rel="prefetch" href="/assets/js/13.65b3226a.js"><link rel="prefetch" href="/assets/js/14.73e13afb.js"><link rel="prefetch" href="/assets/js/15.313fb00f.js"><link rel="prefetch" href="/assets/js/16.b9a147eb.js"><link rel="prefetch" href="/assets/js/17.cf3d39b6.js"><link rel="prefetch" href="/assets/js/18.bfb0725c.js"><link rel="prefetch" href="/assets/js/19.91bc1589.js"><link rel="prefetch" href="/assets/js/20.d857c0d4.js"><link rel="prefetch" href="/assets/js/3.1a658bb7.js"><link rel="prefetch" href="/assets/js/4.c29d3736.js"><link rel="prefetch" href="/assets/js/5.b9e5b570.js"><link rel="prefetch" href="/assets/js/6.1faf97c8.js"><link rel="prefetch" href="/assets/js/7.883080d2.js"><link rel="prefetch" href="/assets/js/8.c1a1d32a.js"><link rel="prefetch" href="/assets/js/9.27b738de.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0c027509.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="剛完成-macos升級，git-卻掛了！！"><a href="#剛完成-macos升級，git-卻掛了！！" class="header-anchor">#</a> 剛完成 macOS升級，git 卻掛了！！</h1> <p>剛完成 macOS 作業系統的昇級，開始進入了 Catalina 10.15 這個新世界！</p> <p>為了想知道目前正進行中的專案，有那些文件檔、程式碼已有更新，我想做個版本變更的存檔。</p> <p><img src="https://paper-attachments.dropbox.com/s_B17C65FA2982BAC47295CB55331674DE28F4F0BF8671D0F7C9FE98EBE1C72AC1_1571190752303_file.jpeg" alt="指尖在鍵盤上輕快地飛舞ing……"></p> <p>打開「終端機」，輸入指令：</p> <div class="language- extra-class"><pre><code>$ git status
+</code></pre></div><p>沒想到電腦竟回應我：</p> <div class="language- extra-class"><pre><code>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+</code></pre></div><p>::: right
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqSHff7A8XTXRKKvJrWbS4dCm7IMahTnKSqfLhMZEcrAYrH9MW" alt="蛤～～～！哇里勒～～！！">
+:::</p> <p>上網求解......</p> <p>還好，方法不難，<code>Command Line Tools for Xcode</code> 得再安裝一下。</p> <p>再度回到「終端機」，輸入下列指令，問題「搞定」！</p> <div class="language- extra-class"><pre><code>$ xcode-select --install
+</code></pre></div><p><img src="https://paper-attachments.dropbox.com/s_B17C65FA2982BAC47295CB55331674DE28F4F0BF8671D0F7C9FE98EBE1C72AC1_1571191552589_file.jpeg" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.00a054c4.js" defer></script><script src="/assets/js/2.e4e37098.js" defer></script><script src="/assets/js/12.af671b96.js" defer></script>
+  </body>
+</html>

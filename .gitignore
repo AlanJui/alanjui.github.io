@@ -10,5 +10,5 @@
 
 # VuePress
 node_modules/
-docs/.vuepress/dist/**
+docs/.vuepress/dist/
 

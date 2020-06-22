@@ -11,17 +11,18 @@
     "build:comment": "node ./build/addCommentTag.js && vuepress build docs && node ./build/removeCommentTag.js",
     "server": "npx http-server docs/.vuepress/dist/",
     "deploy": ". deploy.sh",
+    "publish": ". publish.sh",
     "gitpages": ". publish.sh"
   },
   "dependencies": {
-    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-container": "^2.1.4",
     "vuepress-plugin-font-awesome": "^1.90.6"
   },
   "devDependencies": {
-    "@vssue/api-github-v3": "^1.1.2",
-    "@vssue/vuepress-plugin-vssue": "^1.2.2",
-    "@vuepress/theme-blog": "^1.3.3",
-    "moment": "^2.24.0",
+    "@vssue/api-github-v3": "^1.4.4",
+    "@vssue/vuepress-plugin-vssue": "^1.4.6",
+    "@vuepress/theme-blog": "^2.2.0",
+    "moment": "^2.27.0",
     "vuepress": "^1.2.0"
   }
 }
