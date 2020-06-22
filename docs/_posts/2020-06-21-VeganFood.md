@@ -22,4 +22,4 @@ archived: false
 - [MOMO 購物網 》食品飲料](https://www.momoshop.com.tw/category/LgrpCategory.jsp?l_code=2099900000&mdiv=1099700000-bt_0_957_01-&ctype=B)
 - [陳記醬料](https://shopee.com.my/elroytung?deep_and_deferred=1&pid=partnerize_int&af_click_lookback=7d&is_retargeting=true&af_reengagement_window=7d&af_installpostback=false&af_sub2=SHOPEE&clickid=1101l8uXRkSg&af_siteid=1101l60641&utm_source=1101l60641&utm_medium=affiliates)
 - [純素猴頭菇](https://mall.suiis.com/product_detail.aspx?proid=1008558&scat=17047&class=1)
-- [PC Home 無酒精啤酒](https://24h.pchome.com.tw/store/DBABCP)
+- [無酒精啤酒（PCHome）](https://24h.pchome.com.tw/store/DBABCP)
