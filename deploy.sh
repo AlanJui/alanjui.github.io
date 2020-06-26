@@ -8,4 +8,4 @@ yarn build
 git add -f docs/.vuepress/dist && git commit -m "Update commit"
 
 # (3) Publish to GitHub Repo
-git subtree push --prefix docs/.vuepress/dist origin gh-pages
+git subtree push --prefix=docs/.vuepress/dist origin gh-pages

@@ -12,17 +12,17 @@ module.exports = {
     nav: [
       {
         text: "首頁",
-        link: "/"
+        link: "/",
       },
       {
         text: "歸檔",
-        link: "/archive/"
+        link: "/archive/",
       },
       {
         text: "標籤",
-        link: "/tag/"
-      }
-    ]
+        link: "/tag/",
+      },
+    ],
   },
 
   plugins: [
@@ -36,8 +36,8 @@ module.exports = {
         owner: "AlanJui",
         repo: "my-vuepress-blog",
         clientId: "c5db97c3586af7779b57",
-        clientSecret: "5301618895124721017ff8bfc2e2c2d113716b1f"
-      }
+        clientSecret: "5301618895124721017ff8bfc2e2c2d113716b1f",
+      },
     ],
     [
       "vuepress-plugin-container",
@@ -45,37 +45,38 @@ module.exports = {
         type: "tip",
         defaultTitle: {
           "/": "TIP",
-          "/zh/": "提示"
-        }
-      }
+          "/zh/": "提示",
+        },
+      },
     ],
     [
       "vuepress-plugin-container",
       {
         type: "right",
-        defaultTitle: ""
-      }
+        defaultTitle: "",
+      },
     ],
     [
       "vuepress-plugin-container",
       {
         type: "theorem",
-        before: info => `<div class="theorem"><p class="title">${info}</p>`,
-        after: "</div>"
-      }
-    ]
+        before: (info) => `<div class="theorem"><p class="title">${info}</p>`,
+        after: "</div>",
+      },
+    ],
   ],
 
   configureWebpack: {
     resolve: {
       alias: {
-        "@alias": "../.vuepress/public/img"
-      }
-    }
+        "@alias": "../.vuepress/public/img",
+        "@picts": "../.vuepress/public/assets/img",
+      },
+    },
   },
 
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
   },
 
   thirdParttyComponents: {
@@ -85,10 +86,9 @@ module.exports = {
         "file-audio",
         "cog",
         "calendar-alt",
-        "file-code"
+        "file-code",
       ],
-      solid: ["battery-quarter"]
-    }
-  }
+      solid: ["battery-quarter"],
+    },
+  },
 };
-

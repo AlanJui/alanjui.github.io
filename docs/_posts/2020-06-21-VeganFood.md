@@ -10,6 +10,8 @@ location: 汐止
 archived: false
 ---
 
+![Vegan](~@picts/vegan.jpeg)
+
 ## 專業販售素食食品網站
 
 - [愛家純素生活館](https://www.pcstore.com.tw/lovinghut)
