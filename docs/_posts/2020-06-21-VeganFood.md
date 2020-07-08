@@ -4,6 +4,9 @@ summary: 紀錄可透過「網路」做線上購物的「純素食品網站」�
 tags:
   - Vegan
   - 網路購物
+meta:
+  - property: "og:image"
+    content: "https://alanjui.github.io/assets/img/vegan-cooking-1.jpg"
 date: 2020/06/21
 author: 居正中
 location: 汐止
