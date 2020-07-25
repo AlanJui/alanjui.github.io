@@ -1,11 +1,12 @@
 #!/usr/bin/env sh
 
 # abort on errors
-set -e
+# set -e
 
 # build
-npm run build
+#npm run build
 # yarn build:comment
+yarn build
 
 # navigate into the build output directory
 cd docs/.vuepress/dist/
