@@ -6,7 +6,7 @@ tags:
   - 開發工具
 meta:
   - property: "og:image"
-    content: "https://alanjui.github.io/assets/img/vegan-cooking-1.jpg"
+    content: "https://alanjui.github.io/assets/img/Manjaro-KDE.jpeg"
 date: 2021/02/25
 author: 居正中
 location: 汐止
