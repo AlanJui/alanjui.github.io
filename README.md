@@ -50,7 +50,7 @@ yarn global add vuepress
 #### 【方法一】：
 
 ```shell script
-vuepress dev .
+vuepress dev docs
 ```
 
 #### 【方法二】：
@@ -62,7 +62,7 @@ npm run dev
 #### 【方法三】：
 
 ```shell
-yarn dev
+yarn editing
 ```
 
 4. 啟動 Web 瀏覽器，輸入以下網址，即可看到部落格之內容。
@@ -80,7 +80,7 @@ yarn dev
 #### 【方法一】：
 
     ```
-    $ vuepress build .
+    $ vuepress build docs
     ```
 
 #### 【方法二】：
@@ -119,23 +119,25 @@ yarn dev
 
 5.  在 GitHub 端進行 Git Pages 設定。
 
-          (1) 進入 GitHub 容器之管理網頁，點擊「Settings」連結。
+    (1) 進入 GitHub 容器之管理網頁，點擊「Settings」連結。
 
     ![GitPages設定：起始畫面](docs/.vuepress/public/img/HomePage/GitPages-Setting-1.png)
 
 
-      (2) 進入 Settings 網頁，捲動畫面至下方，找到「GitHub Pages」處。
+    (2) 進入 Settings 網頁，捲動畫面至下方，找到「GitHub Pages」處。
 
-![](docs/.vuepress/public/img/HomePage/GitPages-Setting-2.png)
+    ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-2.png)
 
-      (3) 將 Soure 欄內的選項，改成「gh-pages branch」。
-      ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-3.png)
-      ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-4.png)
+    (3) 將 Soure 欄內的選項，改成「gh-pages branch」。
 
-      (4) 將此 GitHub 容器改設成「個人用」。
-      ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-5.png)
-      ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-6.png)
-      ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-7.png)
+    ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-3.png)
+    ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-4.png)
+
+    (4) 將此 GitHub 容器改設成「個人用」。
+
+    ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-5.png)
+    ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-6.png)
+    ![](docs/.vuepress/public/img/HomePage/GitPages-Setting-7.png)
 
 ## 發佈文章作業
 
@@ -143,6 +145,12 @@ yarn dev
 
 ```
 $ ./publish.sh
+```
+
+或
+
+```
+$ yarn release
 ```
 
 ## 發佈文章至 GitHub 的專案容器

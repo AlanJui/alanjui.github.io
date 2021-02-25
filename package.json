@@ -6,13 +6,11 @@
   "scripts": {
     "fa:build": "node node_modules/vuepress-plugin-font-awesome/index.js",
     "debug": "node --nolazy --inspect-brk=9229 ./node_modules/.bin/vuepress dev docs",
-    "dev": "vuepress dev docs",
+    "editing": "vuepress dev docs",
     "build": "vuepress build docs",
     "build:comment": "node ./build/addCommentTag.js && vuepress build docs && node ./build/removeCommentTag.js",
-    "server": "npx http-server docs/.vuepress/dist/",
-    "deploy": ". deploy.sh",
-    "publish": ". publish.sh",
-    "gitpages": ". publish.sh"
+    "review": "live-server docs/.vuepress/dist/",
+    "release": ". publish.sh"
   },
   "dependencies": {
     "vuepress-plugin-container": "^2.1.4",
@@ -22,6 +20,7 @@
     "@vssue/api-github-v3": "^1.4.4",
     "@vssue/vuepress-plugin-vssue": "^1.4.6",
     "@vuepress/theme-blog": "^2.2.0",
+    "live-server": "^1.2.1",
     "moment": "^2.27.0",
     "vuepress": "^1.2.0"
   }
