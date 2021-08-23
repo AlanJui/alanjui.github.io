@@ -2,7 +2,7 @@
 module.exports = {
   title: "中道部落格",
   description: "使用 VuePress 打造的部落格",
-  base: "/my-vuepress-blog",
+  base: "/",
   // base: '/my-vuepress-blog/',
   locale: "zh-TW",
 
