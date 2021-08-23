@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "docs:build": "vuepress build docs",
     "fa:build": "node node_modules/vuepress-plugin-font-awesome/index.js",
     "debug": "node --nolazy --inspect-brk=9229 ./node_modules/.bin/vuepress dev docs",
     "editing": "vuepress dev docs",
