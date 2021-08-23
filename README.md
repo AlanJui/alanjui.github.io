@@ -11,13 +11,13 @@
 ### 使用 npm 安裝
 
 ```
-npm install -g vuepress
+npm install -d vuepress
 ```
 
 ### 使用 yarn 安裝
 
 ```
-yarn global add vuepress
+yarn add vuepress -D
 ```
 
 > 若是使用 n 作為 Node.js 的版本控管／切換工具，最好不要使用 brew 安裝 yarn ，因為 brew 會自動帶入 node.js 。
@@ -217,3 +217,20 @@ $ ./deploy.sh
   }
 }
 ```
+
+## 參考
+
+### 如何添加評論功能
+
+[vuepress如何添加评论功能](http://www.moyundong.com/frontend/vuepress/7%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD.html#%E9%80%89%E6%8B%A9%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6vssue)
+
+因為你的頁面是“開心”的，你沒有數據庫和完整的 API 的支持。但是你讓你的頁面擁有評論功能，讓用戶可以登錄和發表評論。編碼等平台，示例選擇了github）提供了OAuth API，在他們的幫助下，Vssue 可以讓用戶通過這些平台的登錄，將在這些平台的Issue 系統中評論存儲，並在當前頁面展示。
+
+```
+npm install @vssue/vuepress-plugin-vssue
+npm install @vssue/api-github-v3 或者 npm install @vssue/api-github-v4
+```
+
+::: tip
+@vssue/api-github-v3和@vssue/api-github-v4的區別是v3不要登錄，但是有調用次數限制，v4必須登錄但沒有次數限制v3的平台是github，v4是github-v4用是github的評論功能，所以必須有github賬號
+:::
