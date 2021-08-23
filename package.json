@@ -13,16 +13,11 @@
     "review": "live-server docs/.vuepress/dist/",
     "release": ". publish.sh"
   },
-  "dependencies": {
-    "vuepress-plugin-container": "^2.1.4",
-    "vuepress-plugin-font-awesome": "^1.90.6"
-  },
   "devDependencies": {
-    "@vssue/api-github-v3": "^1.4.4",
-    "@vssue/vuepress-plugin-vssue": "^1.4.6",
-    "@vuepress/theme-blog": "^2.2.0",
-    "live-server": "^1.2.1",
-    "moment": "^2.27.0",
-    "vuepress": "^1.2.0"
+    "@vuepress/theme-blog": "^2.3.3",
+    "moment": "^2.29.1",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-container": "^2.1.5",
+    "vuepress-plugin-font-awesome": "^1.90.6"
   }
 }

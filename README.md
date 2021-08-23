@@ -184,3 +184,36 @@ $ ./deploy.sh
     ```
     git subtree push --prefix docs/.vuepress/dist origin gh-pages
     ```
+
+【package.json】：
+
+```
+{
+  "name": "vuewpress",
+  "version": "1.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "fa:build": "node node_modules/vuepress-plugin-font-awesome/index.js",
+    "debug": "node --nolazy --inspect-brk=9229 ./node_modules/.bin/vuepress dev docs",
+    "editing": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "build:comment": "node ./build/addCommentTag.js && vuepress build docs && node ./build/removeCommentTag.js",
+    "review": "live-server docs/.vuepress/dist/",
+    "release": ". publish.sh"
+  },
+  "dependencies": {
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "@vuepress/theme-blog": "^2.3.3",
+    "moment": "^2.29.1",
+    "vuepress-plugin-container": "^2.1.4",
+    "vuepress-plugin-font-awesome": "^1.90.6"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "vuepress": "^1.8.2"
+  }
+}
+```
