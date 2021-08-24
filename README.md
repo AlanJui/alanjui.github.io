@@ -203,17 +203,14 @@ $ ./deploy.sh
     "review": "live-server docs/.vuepress/dist/",
     "release": ". publish.sh"
   },
-  "dependencies": {
+  "devDependencies": {
     "@vssue/api-github-v3": "^1.4.7",
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "@vuepress/theme-blog": "^2.3.3",
     "moment": "^2.29.1",
-    "vuepress-plugin-container": "^2.1.4",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-font-awesome": "^1.90.6"
-  },
-  "devDependencies": {
-    "live-server": "^1.2.1",
-    "vuepress": "^1.8.2"
   }
 }
 ```
@@ -231,6 +228,54 @@ npm install @vssue/vuepress-plugin-vssue
 npm install @vssue/api-github-v3 或者 npm install @vssue/api-github-v4
 ```
 
-::: tip
-@vssue/api-github-v3和@vssue/api-github-v4的區別是v3不要登錄，但是有調用次數限制，v4必須登錄但沒有次數限制v3的平台是github，v4是github-v4用是github的評論功能，所以必須有github賬號
-:::
+> **【備註】：**
+>
+> @vssue/api-github-v3和@vssue/api-github-v4的區別是v3不要登錄，但是有調用次數限制，v4必須登錄但沒有次數限制v3的平台是github，v4是github-v4用是github的評論功能，所以必須有github賬號
+
+### VuePress Blog 模版
+
+使用 主題模版建置 Blog 網站。
+
+ - [Official blog plugin for VuePress - GitHub](https://github.com/vuepress/vuepress-plugin-blog)
+
+ - [@vuepress/plugin-blog](https://vuepress.vuejs.org/plugin/official/plugin-blog.html#features)
+
+ - [Vuepress 部落格開發踩坑記](https://lucas-yang.vercel.app/post/new-vuepress-blog/)
+
+ - [Blog theme](https://vuepress.vuejs.org/theme/blog-theme.html)
+
+ - [Example Modern Vuepress Blog Theme](https://morioh.com/p/d486b765ea63)
+
+ - [z3by/vuepress-blog-template](https://ithelp.ithome.com.tw/articles/10243353?sc=iThomeR)
+
+![](https://i.imgur.com/0tExya3.jpg)
+
+### VuePress 主題
+
+如何使用[ VuePress 主題](https://www.vuepress.cn/theme/)。
+
+```
+.
+└─ .vuepress
+ └─ theme
+  ├── global-components
+  │   └── xxx.vue
+  ├── components
+  │   └── xxx.vue
+  ├── layouts
+  │   ├── Layout.vue (必要的)
+  │   └── 404.vue
+  ├── styles
+  │   ├── index.styl
+  │   └── palette.styl
+  ├── templates
+  │   ├── dev.html
+  │   └── ssr.html
+  ├── index.js
+  ├── enhanceApp.js
+  └── package.json
+```
+
+### 討論留言
+
+[lorisleiva/vuepress-plugin-disqus](https://github.com/lorisleiva/vuepress-plugin-disqus)

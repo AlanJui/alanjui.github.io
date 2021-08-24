@@ -23,45 +23,43 @@ module.exports = {
         link: "/tag/",
       },
     ],
+    footer: {
+      contact:[
+        {
+          type: 'github',
+          link: 'https://github.com/vuejs/vuepress'
+        },
+        {
+          type: 'twitter',
+          link: 'https://github.com/vuejs/vuepress',
+        },
+      ],
+    },
   },
 
   plugins: [
     [
       "@vssue/vuepress-plugin-vssue",
       {
-        // 设置 `platform` 而不是 `api`
         platform: "github",
-
+        locale: 'zh-TW',
         // 其他的 Vssue 配置
         owner: "AlanJui",
-        repo: "my-vuepress-blog",
+        repo: "alanjui.github.io",
         clientId: "c5db97c3586af7779b57",
-        clientSecret: "5301618895124721017ff8bfc2e2c2d113716b1f",
+        clientSecret: "135a484500fc183f38ec83d6cd28fa29018c2d21",
+        autoCreateIssue:true
       },
     ],
     [
-      "vuepress-plugin-container",
+      "@vuepress/container",
       {
         type: "tip",
-        defaultTitle: {
-          "/": "TIP",
-          "/zh/": "提示",
+        locales: {
+          '/': {
+            defaultInfo: '提示',
+          },
         },
-      },
-    ],
-    [
-      "vuepress-plugin-container",
-      {
-        type: "right",
-        defaultTitle: "",
-      },
-    ],
-    [
-      "vuepress-plugin-container",
-      {
-        type: "theorem",
-        before: (info) => `<div class="theorem"><p class="title">${info}</p>`,
-        after: "</div>",
       },
     ],
   ],
@@ -91,4 +89,5 @@ module.exports = {
       solid: ["battery-quarter"],
     },
   },
+
 };

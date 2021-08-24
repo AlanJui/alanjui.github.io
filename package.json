@@ -14,10 +14,17 @@
     "release": ". publish.sh"
   },
   "devDependencies": {
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "@vuepress/theme-blog": "^2.3.3",
+    "live-server": "^1.2.1",
     "moment": "^2.29.1",
     "vuepress": "^1.8.2",
     "vuepress-plugin-container": "^2.1.5",
+    "vuepress-plugin-disqus": "^0.2.0",
     "vuepress-plugin-font-awesome": "^1.90.6"
+  },
+  "dependencies": {
+    "markdown-it-container": "^3.0.0"
   }
 }
