@@ -12,6 +12,6 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.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 }}
         TARGET_REPO: AlanJui/alanjui.github.io
-        TARGET_BRANCH: master
+        TARGET_BRANCH: gh-pages
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: docs/.vuepress/dist
