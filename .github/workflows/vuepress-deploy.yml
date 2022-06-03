@@ -1,0 +1,17 @@
+name: Build and Deploy
+on: [push]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: vuepress-deploy
+      uses: AlanJui/alanjui.github.io@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.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 }}
+        TARGET_REPO: AlanJui/alanjui.github.io
+        TARGET_BRANCH: master
+        BUILD_SCRIPT: yarn && yarn build
+        BUILD_DIR: docs/.vuepress/dist
