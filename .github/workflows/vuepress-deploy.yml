@@ -10,7 +10,7 @@ jobs:
     - name: vuepress-deploy
       uses: AlanJui/alanjui.github.io@master
       env:
-        ACCESS_TOKEN: ${{ secrets.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 }}
+        ACCESS_TOKEN: ${{ secrets.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 }}
         TARGET_REPO: AlanJui/alanjui.github.io
         TARGET_BRANCH: master
         BUILD_SCRIPT: yarn && yarn build
