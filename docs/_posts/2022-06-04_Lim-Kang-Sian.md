@@ -13,6 +13,8 @@ location: 汐止
 archived: false
 ---
 
+<a class="btn" href="https://www.letswrite.tw/">Let's Write 官網</a>
+
 《
 <ruby style="font-size:32px;">臨<rt>ㄌㄧㆬˊ</rt>江<rt>ㄍㄤ</rt>仙<rt>ㄒㄧㄢ</rt></ruby>
 》
